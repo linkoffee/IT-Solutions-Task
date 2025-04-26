@@ -1,0 +1,6 @@
+{% extends "dds/dictionaries/base/base_form.html" %}
+{% block content %}
+    {% with title="статуса" back_url="status_list" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

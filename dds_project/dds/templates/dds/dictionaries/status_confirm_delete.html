@@ -1,0 +1,6 @@
+{% extends "dds/dictionaries/base/base_confirm_delete.html" %}
+{% block content %}
+    {% with cancel_url="status_list" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

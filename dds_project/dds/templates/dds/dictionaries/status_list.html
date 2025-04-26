@@ -1,0 +1,6 @@
+{% extends "dds/dictionaries/base/base_list.html" %}
+{% block content %}
+    {% with title="Статусы" create_url="status_create" edit_url="status_edit" delete_url="status_delete"%}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}
