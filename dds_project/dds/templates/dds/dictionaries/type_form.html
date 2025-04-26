@@ -1,0 +1,6 @@
+{% extends "dds/dictionaries/base/base_form.html" %}
+{% block content %}
+    {% with title="типа операции" back_url="type_list" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

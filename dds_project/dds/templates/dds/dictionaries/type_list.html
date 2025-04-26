@@ -1,0 +1,6 @@
+{% extends "dds/dictionaries/base/base_list.html" %}
+{% block content %}
+    {% with title="Типы операций" create_url="type_create" edit_url="type_edit" delete_url="type_delete"%}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

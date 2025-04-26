@@ -1,0 +1,6 @@
+{% extends "dds/dictionaries/base/base_confirm_delete.html" %}
+{% block content %}
+    {% with cancel_url="type_list" warning_message="Все связанные категории также будут удалены!" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}
