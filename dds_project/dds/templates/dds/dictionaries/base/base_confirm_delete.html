@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-header bg-danger text-white">
+        <h5 class="mb-0">
+            <i class="bi bi-exclamation-triangle me-2"></i>Подтверждение удаления
+        </h5>
+    </div>
+    <div class="card-body">
+        <p class="lead">Вы уверены, что хотите удалить "{{ object }}"?</p>
+        
+        {% if warning_message %}
+        <div class="alert alert-warning">
+            <i class="bi bi-exclamation-octagon me-2"></i>{{ warning_message }}
+        </div>
+        {% endif %}
+        
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">
+                <i class="bi bi-trash me-2"></i>Да, удалить
+            </button>
+            <a href="{% url cancel_url %}" class="btn btn-secondary">
+                <i class="bi bi-x-circle me-2"></i>Отмена
+            </a>
+        </form>
+    </div>
+</div>
+{% endblock %}
