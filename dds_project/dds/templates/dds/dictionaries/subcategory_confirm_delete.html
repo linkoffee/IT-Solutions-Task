@@ -1,0 +1,6 @@
+{% extends "dds/dictionaries/base/base_confirm_delete.html" %}
+{% block content %}
+    {% with cancel_url="subcategory_list" warning_message="Все связанные операции будут переназначены в категорию 'Без подкатегории'" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}

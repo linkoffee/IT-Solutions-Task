@@ -1,0 +1,11 @@
+{% extends "dds/dictionaries/base/base_list.html" %}
+
+{% block additional_headers %}
+<th>Категория</th>
+{% endblock %}
+
+{% block content %}
+    {% with title="Подкатегории" create_url="subcategory_create" edit_url="subcategory_edit" delete_url="subcategory_delete"%}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}
