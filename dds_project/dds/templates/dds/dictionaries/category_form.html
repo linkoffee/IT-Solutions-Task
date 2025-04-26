@@ -1,0 +1,6 @@
+{% extends "dds/dictionaries/base/base_form.html" %}
+{% block content %}
+    {% with title="категории" back_url="category_list" %}
+        {{ block.super }}
+    {% endwith %}
+{% endblock %}
